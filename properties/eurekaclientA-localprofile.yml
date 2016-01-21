@@ -1,0 +1,3 @@
+info:
+  configuration: Read From Config Service localprofile.yml
+  defaultmessage: this is defaultmessage 读取配置的profiles ==> localprofile.yml
