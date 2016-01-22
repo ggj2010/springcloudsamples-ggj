@@ -1,0 +1,13 @@
+info:
+  configuration: Read From Config Service eurekaclientB.yml
+  defaultmessage: this is defaultmessage 读取默认profiles eurekaclientB.yml
+spring:
+  h2:
+    console:
+      enabled: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug

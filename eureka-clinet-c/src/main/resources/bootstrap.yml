@@ -1,0 +1,20 @@
+#端口号设置为0 会随机分配，测试的时候可以设置成固定的
+server:
+     port: 81
+info:
+     name: Eureka-ClientB
+
+#项目唯一标示名称
+spring:
+  applaction:
+     name: eurekaclientB
+
+  cloud:
+    config:
+      name : eurekaclientB
+      failFast: true
+      label: master
+      uri: http://localhost:8888
+
+
+

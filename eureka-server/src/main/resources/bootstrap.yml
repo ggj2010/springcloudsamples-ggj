@@ -1,0 +1,29 @@
+#项目唯一标示名称
+spring:
+  applaction:
+     name: eureka-service
+  #profiles:
+    #active: local
+  #config-server地址  /{application}-{profile}.properties
+  #cloud:
+    #config:
+      #failFast: true
+      #label: master
+      #uri: http://localhost:8888
+
+#端口号
+server:
+     port: 8761
+
+#配置eureka服务端的信息
+eureka:
+  #instance:
+   # hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+      #服务端地址
+   # serviceUrl:
+    #  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

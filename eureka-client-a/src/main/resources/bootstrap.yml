@@ -1,0 +1,24 @@
+#端口号设置为0 会随机分配，测试的时候可以设置成固定的
+server:
+     port: 80
+info:
+     name: Eureka-ClientA
+
+#项目唯一标示名称
+spring:
+  applaction:
+     name: eurekaclientA
+
+  #eurekaclienta-localprofile.yml
+  #profiles:
+    #active: localprofile
+  cloud:
+    config:
+    #各种版本对应配置文件不一致，新版本如果不配置name属性只会找默认的application.yml或者properties，新版本的需要注意大小写
+      name : eurekaclientA
+      failFast: true
+      label: master
+      uri: http://localhost:8888
+
+
+

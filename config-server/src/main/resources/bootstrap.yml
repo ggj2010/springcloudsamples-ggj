@@ -1,0 +1,18 @@
+#端口号
+server:
+  port: 8888
+
+info:
+  name: "Config Service"
+spring:
+  application:
+    name: config-service
+#spring.cloud.config.server.git.uri    git配置地址
+  cloud:
+    config:
+      enabled: true
+      server:
+        git:
+          uri: https://github.com/ggj2010/springcloudsamples-config
+          #username: ggj
+          #password: 123

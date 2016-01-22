@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ggj</groupId>
+    <artifactId>springcloud</artifactId>
+    <version>1.0</version>
+    <!--spring-cloud-starter-parent版本迭代太快，目前选用master版本Brixton.M4-->
+    <!--以后如果要升级 https://github.com/spring-cloud/spring-cloud-starters/blob/master/spring-cloud-starter-parent/pom.xml-->
+    <parent>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>Brixton.M4</version>
+      <!--  <version>Angel.SR3</version>-->
+    </parent>
+
+    <modules>
+        <module>eureka-server</module>
+        <module>eureka-client-a</module>
+        <module>eureka-client-b</module>
+        <module>zuul</module>
+        <module>base</module>
+        <module>config-server</module>
+        <module>eureka-clinet-c</module>
+        <module>eureka-client-b</module>
+        <module>eureka-client-b</module>
+        <module>test</module>
+        <module>eureka-client-b</module>
+        <module>eureka-client-bb</module>
+        <module>eureka-client-d</module>
+    </modules>
+
+    <packaging>pom</packaging>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.7</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
