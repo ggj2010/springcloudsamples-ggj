@@ -5,6 +5,6 @@
 <mapper namespace="com.ggj.dao.CityDao" >
     <cache />
     <select id="getCity" resultType="City">
-        select * from City where id = #{id}
+        select id,name,COUNTRY from City where id = #{id}
     </select>
 </mapper>

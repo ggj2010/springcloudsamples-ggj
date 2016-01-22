@@ -1,12 +1,15 @@
 info:
   configuration: Read From Config Service eurekaclientB.yml
   defaultmessage: this is defaultmessage 读取默认profiles eurekaclientB.yml
+
+log:
+  file: eurekaclientB.log
 #数据源
 spring:
     datasource:
         schema: import.sql
         name: database
-        url: dbc:mysql://10.32.31.229:3306/test?useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://10.32.31.229:3306/test?useUnicode=true&characterEncoding=utf-8
         username: root
         password: root
         # 使用druid数据源

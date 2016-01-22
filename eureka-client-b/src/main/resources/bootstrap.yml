@@ -4,15 +4,22 @@ server:
 info:
      name: Eureka-ClientB
 
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      mybatis:
+        spring: DEBUG
+
 mybatis:
-# mybatis config file
-  config: mybatis-config.xml
+  #config: mybatis-config.xml
    # mappers file
-  mapperLocations:  classpath:mappings/**/*.xml
-  # domain object's package
-  typeAliasesPackage: com.ggj
+  mapperLocations: classpath:mappings/**/*.xml
+
+  typeAliasesPackage: com.ggj.bean
    # handler's package
-  typeHandlersPackage:  com.ggj
+  #typeHandlersPackage:
 
 #项目唯一标示名称
 spring:

@@ -19,6 +19,3 @@ spring:
       failFast: true
       label: master
       uri: http://localhost:8888
-
-
-

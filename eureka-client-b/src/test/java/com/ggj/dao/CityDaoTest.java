@@ -8,6 +8,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.OutputCapture;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
@@ -27,6 +28,6 @@ public class CityDaoTest {
     @Test
     public void testGetCity() throws Exception {
        City city=cityDao.getCity(1);
-        assertTrue("执行出错！"+city.getName(),city.getName()=="beijin");
+        assertTrue("执行出错！"+city.getName(),"beijin".equals(city.getName()));
     }
 }
