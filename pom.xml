@@ -20,26 +20,48 @@
         <module>eureka-server</module>
         <module>eureka-client-a</module>
         <module>eureka-client-b</module>
+        <module>eureka-clinet-c</module>
         <module>zuul</module>
         <module>base</module>
         <module>config-server</module>
-        <module>eureka-clinet-c</module>
-        <module>eureka-client-b</module>
-        <module>eureka-client-b</module>
-        <module>test</module>
-        <module>eureka-client-b</module>
-        <module>eureka-client-bb</module>
-        <module>eureka-client-d</module>
     </modules>
 
     <packaging>pom</packaging>
+    <properties>
+        <fastjson.version>1.2.7</fastjson.version>
 
+        <!-- jdbc driver setting -->
+        <mysql.driver.version>5.1.30</mysql.driver.version>
+        <druid.version>1.0.15</druid.version>
+        <mybatis-spring-boot-starter.version>1.0.1-SNAPSHOT</mybatis-spring-boot-starter.version>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>1.2.7</version>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- jdbc driver -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.driver.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!--mybatis springboot-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

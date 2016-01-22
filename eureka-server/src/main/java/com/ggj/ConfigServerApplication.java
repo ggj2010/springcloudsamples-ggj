@@ -15,9 +15,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 //注解声明这是eureka服务端
 @EnableEurekaServer
-//扫描所有可以远程调用的client
-@EnableFeignClients("com.ggj.client.*")
-@ComponentScan("com.ggj.*")
 public class ConfigServerApplication {
 
     public static void main(String[] args) {

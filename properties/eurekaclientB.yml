@@ -1,13 +1,30 @@
 info:
   configuration: Read From Config Service eurekaclientB.yml
   defaultmessage: this is defaultmessage 读取默认profiles eurekaclientB.yml
+#数据源
 spring:
-  h2:
-    console:
-      enabled: true
+    datasource:
+        schema: import.sql
+        name: database
+        url: dbc:mysql://10.32.31.229:3306/test?useUnicode=true&characterEncoding=utf-8
+        username: root
+        password: root
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQueryTimeout: 900000
+        validationQuery: SELECT SYSDATE() from dual
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
 
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: debug
+

@@ -10,10 +10,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableDiscoveryClient
 //注解声明断路器
 //@EnableCircuitBreaker
-public class ClientBpplication {
+public class ClientApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ClientBpplication.class);
+        SpringApplication.run(ClientApplication.class);
     }
 
 }
