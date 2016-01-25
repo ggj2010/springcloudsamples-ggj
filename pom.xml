@@ -24,6 +24,7 @@
         <module>zuul</module>
         <module>base</module>
         <module>config-server</module>
+        <module>spring-cloud-dashboard</module>
     </modules>
 
     <packaging>pom</packaging>

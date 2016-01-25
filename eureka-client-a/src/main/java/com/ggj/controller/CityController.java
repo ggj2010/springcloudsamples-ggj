@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.websocket.server.PathParam;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * author:gaoguangjin
@@ -27,6 +29,8 @@ public class CityController {
     @Autowired
     private CityService cityService;
 
+    private AtomicInteger atomicInt=new AtomicInteger();
+
     /**
      * rest方式
      * @param name
@@ -35,6 +39,7 @@ public class CityController {
      */
     @RequestMapping(value = "getcountryrest/{name}/{country}")
     public City getCityRest(@PathVariable String name,@PathVariable String country){
+      log.info(atomicInt.incrementAndGet()+":"+"getCityRest被调用");
         return cityService.getCity(name,country);
     }
 
@@ -46,6 +51,7 @@ public class CityController {
      */
     @RequestMapping(value = "getcountry")
     public City getCity(@RequestParam(defaultValue ="Brisbane",value = "name",required = true) String name, @RequestParam(defaultValue ="Australia",value = "country",required = true) String country){
+        log.info(atomicInt.incrementAndGet()+":"+"getcountry被调用");
         return cityService.getCity(name,country);
     }
 
@@ -57,6 +63,7 @@ public class CityController {
      */
     @RequestMapping(value="message")
     public Message getMessageBean(Message message){
+        log.info(atomicInt.incrementAndGet()+":"+"getMessageBean被调用");
       if(null==message) message=new Message();
         message.setMessage(message.getMessage()+" ==>from client-a");
         return message;

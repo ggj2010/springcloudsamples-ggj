@@ -1,6 +1,6 @@
 #端口号设置为0 会随机分配，测试的时候可以设置成固定的
 server:
-     port: 81
+     port: 0
 info:
      name: "Eureka-ClientB"
 

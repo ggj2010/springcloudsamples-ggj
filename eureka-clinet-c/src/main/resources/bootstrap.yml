@@ -1,20 +1,30 @@
 #端口号设置为0 会随机分配，测试的时候可以设置成固定的
 server:
-     port: 81
+     port: 0
 info:
-     name: Eureka-ClientB
+     name: "Eureka-ClientC"
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      mybatis:
+        spring: DEBUG
 
 #项目唯一标示名称
 spring:
-  applaction:
-     name: eurekaclientB
+  application:
+     name: eurekaclientC
 
   cloud:
     config:
-      name : eurekaclientB
+      name : eurekaclientC
       failFast: true
       label: master
       uri: http://localhost:8888
+
+
 
 
 

@@ -17,8 +17,8 @@ server:
 
 #配置eureka服务端的信息
 eureka:
-  #instance:
-   # hostname: localhost
+  instance:
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false

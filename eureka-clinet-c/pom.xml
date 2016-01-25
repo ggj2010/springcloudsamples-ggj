@@ -44,6 +44,7 @@
                <groupId>de.codecentric</groupId>
                <artifactId>spring-boot-admin-starter-client</artifactId>
            </dependency>-->
+
         <!--监控性能和指标-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -64,6 +65,28 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
@@ -97,7 +120,7 @@
     </dependencies>
 
     <build>
-        <finalName>eureka-server</finalName>
+        <finalName>eureka-clinet-c</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
