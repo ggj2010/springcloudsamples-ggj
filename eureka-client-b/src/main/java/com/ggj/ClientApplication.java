@@ -17,12 +17,12 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-//注解声明断路器
-//@EnableCircuitBreaker
+//注解声明断路器，让容错起作用
+@EnableCircuitBreaker
 //扫描mybatis接口
-@MapperScan("com.ggj.dao.*")
+@MapperScan("com.ggj.dao")
 //扫描所有可以远程调用的client
-@EnableFeignClients("com.ggj.client.*")
+@EnableFeignClients(value="com.ggj.client")
 public class ClientApplication {
 
     public static void main(String[] args) {

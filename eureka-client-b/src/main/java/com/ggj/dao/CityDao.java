@@ -10,4 +10,6 @@ import com.ggj.bean.City;
  */
 public interface CityDao {
     City getCity(int id);
+
+    void insert(City city);
 }

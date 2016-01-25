@@ -2,21 +2,17 @@ package com.ggj;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * author:gaoguangjin
- * Description:服务注册和发现 服务端eureka
+ * Description:配置项客户端
  * Email:335424093@qq.com
- * Date 2016/1/21 11:07
+ * Date 2016/1/21 15:45
  */
 @SpringBootApplication
-//注解声明这是eureka服务端
-@EnableEurekaServer
+@EnableConfigServer
 public class ConfigServerApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(ConfigServerApplication.class);
     }

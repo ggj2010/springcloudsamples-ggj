@@ -2,7 +2,7 @@
 server:
      port: 81
 info:
-     name: Eureka-ClientB
+     name: "Eureka-ClientB"
 
 logging:
   level:
@@ -23,7 +23,7 @@ mybatis:
 
 #项目唯一标示名称
 spring:
-  applaction:
+  application:
      name: eurekaclientB
 
   cloud:

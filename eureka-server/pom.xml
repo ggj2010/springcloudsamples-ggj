@@ -14,7 +14,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--main方法类-->
-        <start-class>com.ggj.ConfigServerApplication</start-class>
+        <start-class>com.ggj.EurekaServerApplication</start-class>
         <java.version>1.8</java.version>
     </properties>
 

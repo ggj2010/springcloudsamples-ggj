@@ -9,7 +9,7 @@ spring:
     datasource:
         schema: import.sql
         name: database
-        url: jdbc:mysql://10.32.31.229:3306/test?useUnicode=true&characterEncoding=utf-8
+        url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
         username: root
         password: root
         # 使用druid数据源

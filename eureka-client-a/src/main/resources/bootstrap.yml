@@ -2,11 +2,11 @@
 server:
      port: 80
 info:
-     name: Eureka-ClientA
+     name: "Eureka-ClientA"
 
 #项目唯一标示名称
 spring:
-  applaction:
+  application:
      name: eurekaclientA
 
   #eurekaclienta-localprofile.yml

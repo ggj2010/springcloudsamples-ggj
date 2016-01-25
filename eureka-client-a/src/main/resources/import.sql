@@ -187,4 +187,4 @@ insert into review(hotel_id, idx, check_in_date, rating, trip_type, title, detai
 
 
 
-insert into city(country, name, state, map) values ('beijin', 'China', 'DC', '38.895112, -77.036366')
+insert into city(country, name, state, map) values ('china', 'beijin','', '数据来自eureka-client-a')
