@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * author:gaoguangjin
@@ -33,6 +34,8 @@ public class ClientBController {
     @Autowired
     private DiscoveryClientService discoveryClientService;
 
+    private AtomicInteger atomicInteger=new AtomicInteger();
+
     /**
      * 获取client-a  param
      * @param id
@@ -41,6 +44,7 @@ public class ClientBController {
     @RequestMapping(value = "getcity")
     public City getCity(@RequestParam int id) {
         City city = cityService.getCity(id);
+        log.info(atomicInteger.incrementAndGet()+":"+"getcity被调用");
         return feignClientAService.getCity(city);
     }
 
@@ -52,6 +56,7 @@ public class ClientBController {
     @RequestMapping(value = "getcityrest")
     public City getCityRest(@RequestParam int id) {
         City city = cityService.getCity(id);
+        log.info(atomicInteger.incrementAndGet()+":"+"getcityrest被调用");
         return feignClientAService.getCityRest(city);
     }
 
@@ -61,6 +66,7 @@ public class ClientBController {
      */
     @RequestMapping(value = "processmsg")
     public Message processMsg(@RequestParam (defaultValue = "default-client-b")String msg) {
+        log.info(atomicInteger.incrementAndGet()+":"+"processMsg被调用");
         return feignClientAService.processMessage(msg);
     }
 
