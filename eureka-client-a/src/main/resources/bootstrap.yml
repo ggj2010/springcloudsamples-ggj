@@ -19,3 +19,7 @@ spring:
       failFast: true
       label: master
       uri: http://localhost:8888
+   #使用rabbitmq 往turbine发送消息
+   rabbitmq:
+        host: localhost
+        port: 5672

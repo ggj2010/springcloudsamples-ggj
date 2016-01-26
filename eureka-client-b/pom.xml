@@ -54,19 +54,29 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
+        <!--可以使用@feign远程调用-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
-
+        <!--容错-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
-      <dependency>
+
+           <!--springcloud bus 支持 spring-cloud-starter-bus-redis 和spring-cloud-starter-bus-kafka 如果集群微服务，修改git配置项的时候，直接调用/bus/refresh-->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+
+
+        <!--往turbine发送微服务的消息 所有@HystrixCommand的方法都可以被监控到-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-turbine-amqp</artifactId>
         </dependency>
 
 

@@ -1,0 +1,24 @@
+server:
+  port: 8989
+
+info:
+  name: "Turbine"
+
+#turbine用到
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+spring:
+  application:
+    name: turbine
+  cloud:
+    config:
+      failFast: true
+      uri: http://localhost:8888
+  #往mq发送消息
+  rabbitmq:
+    host: localhost
+    port: 5672

@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-//注解声明断路器
+//注解声明断路器，容错才可以使用，同事turbine可以收集到信息
 @EnableCircuitBreaker
 //扫描所有可以远程调用的client
 @EnableFeignClients(value="com.ggj.client")

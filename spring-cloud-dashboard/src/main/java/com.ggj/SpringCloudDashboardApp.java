@@ -10,6 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
+//使用springcloud 面板
 @EnableCloudDashboard
 public class SpringCloudDashboardApp {
     public static void main(String[] args) {

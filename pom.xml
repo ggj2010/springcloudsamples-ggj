@@ -25,19 +25,36 @@
         <module>base</module>
         <module>config-server</module>
         <module>spring-cloud-dashboard</module>
+        <module>turbine</module>
     </modules>
 
     <packaging>pom</packaging>
     <properties>
+        <spring-cloud-starter-parent.version>Brixton.M4</spring-cloud-starter-parent.version>
         <fastjson.version>1.2.7</fastjson.version>
-
         <!-- jdbc driver setting -->
         <mysql.driver.version>5.1.30</mysql.driver.version>
         <druid.version>1.0.15</druid.version>
         <mybatis-spring-boot-starter.version>1.0.1-SNAPSHOT</mybatis-spring-boot-starter.version>
+        <!--spring cloud 面板-->
+        <spring-cloud-dashboard.version>1.0.0.RELEASE</spring-cloud-dashboard.version>
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--spring cloud 面板-->
+            <dependency>
+                <groupId>com.github.vanroy</groupId>
+                <artifactId>spring-cloud-dashboard</artifactId>
+                <version>${}spring-cloud-dashboard.version}</version>
+            </dependency>
+
+            <!--往turbine发送微服务的消息 所有@HystrixCommand的方法都可以被监控到-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
+                <version>${spring-cloud-starter-parent.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>

@@ -3,6 +3,7 @@ package com.ggj.controller;
 import com.ggj.bean.Message;
 import com.ggj.client.ClientA;
 import com.ggj.client.ClientB;
+import com.ggj.service.BaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,24 +21,24 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RestController
 @Slf4j
 public class BaseController {
-    @Autowired
-    private ClientA clienta;
+
 
     @Autowired
-    private ClientB clientb;
+    private BaseService baseService;
+
 
     private AtomicInteger atomicInteger=new AtomicInteger();
 
     @RequestMapping(value = "processa")
     public Message processMsga(@RequestParam(defaultValue = "default-client-c")String msg){
         log.info(atomicInteger.incrementAndGet()+":"+"processMsga被调用");
-        return clienta.processMessage(msg);
+        return baseService.processMessageA(msg);
     }
 
     @RequestMapping(value = "processb")
     public Message processMsgb(@RequestParam(defaultValue = "default-client-c")String msg){
         log.info(atomicInteger.incrementAndGet()+":"+"processMsgb被调用");
-        return clientb.processMessage(msg);
+        return baseService.processMessageB(msg);
     }
 
 }

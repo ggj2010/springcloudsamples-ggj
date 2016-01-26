@@ -13,11 +13,11 @@
     <version>1.0</version>
 
     <dependencies>
+        <!--spring-cloud 面板 可以显示抓取到很多信息-->
         <dependency>
-            <groupId>com.github.vanroy</groupId>
-            <artifactId>spring-cloud-dashboard</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>
+        <groupId>com.github.vanroy</groupId>
+        <artifactId>spring-cloud-dashboard</artifactId>
+    </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>

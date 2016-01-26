@@ -4,13 +4,19 @@ server:
 info:
   name: "Spring-Cloud-Dashboard"
 
-#
-# Use valid URI characters (eg: do not use _ in names)
-#
+
 spring:
   application:
     name: Spring-Cloud-Dashboard
   cloud:
     dashboard:
+      #turbine的信息
       turbine:
         url: http://localhost:8989/turbine.stream
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
