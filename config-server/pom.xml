@@ -24,6 +24,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
+        <!--springcloud bus 支持 spring-cloud-starter-bus-redis 和spring-cloud-starter-bus-kafka 如果集群微服务，修改git配置项的时候，直接调用/bus/refresh-->
+       <!--http://localhost:8888/bus/refresh post 提交-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
 
         <!--test -->
         <dependency>
