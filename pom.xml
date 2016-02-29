@@ -32,10 +32,11 @@
     <properties>
         <spring-cloud-starter-parent.version>Brixton.M4</spring-cloud-starter-parent.version>
         <fastjson.version>1.2.7</fastjson.version>
+        <java.version>1.8</java.version>
         <!-- jdbc driver setting -->
         <mysql.driver.version>5.1.30</mysql.driver.version>
         <druid.version>1.0.15</druid.version>
-        <mybatis-spring-boot-starter.version>1.0.1-SNAPSHOT</mybatis-spring-boot-starter.version>
+        <mybatis-spring-boot-starter.version>1.0.0</mybatis-spring-boot-starter.version>
         <!--spring cloud 面板-->
         <spring-cloud-dashboard.version>1.0.0.RELEASE</spring-cloud-dashboard.version>
     </properties>
@@ -52,7 +53,8 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
-                <version>${spring-cloud-starter-parent.version}</version>
+                <version>1.1.0.M4</version>
+               <!-- <version>${spring-cloud-starter-parent.version}</version>-->
             </dependency>
 
             <dependency>
