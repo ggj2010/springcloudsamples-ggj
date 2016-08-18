@@ -82,7 +82,7 @@
     测试eureka-clientC 调用 eureka-clientB 或者eureka-clientA的 我们可以通过spring-cloud-dashboard查看到eureka-clientC 的端口号或者通过idea
     打印的日志 例如2016-08-18 14:04:21.275  INFO 2768 --- [main] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 65026 获取到端口号
     
-    ![image](https://raw.githubusercontent.com/ggj2010/springcloudsamples-ggj/master/properties/QQ%E6%88%AA%E5%9B%BE201608181817.png)
+ ![image](https://raw.githubusercontent.com/ggj2010/springcloudsamples-ggj/master/properties/QQ%E6%88%AA%E5%9B%BE201608181817.png)
     
     
 #####C调用A ： 
