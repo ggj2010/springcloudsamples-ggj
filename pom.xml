@@ -8,12 +8,13 @@
     <artifactId>springcloud</artifactId>
     <version>1.0</version>
     <!--spring-cloud-starter-parent版本迭代太快，目前选用master版本Brixton.M4-->
-    <!--以后如果要升级 https://github.com/spring-cloud/spring-cloud-starters/blob/master/spring-cloud-starter-parent/pom.xml-->
+    <!--以后如果要升级 https://github.com/spring-cloud/spring-cloud-release/blob/master/spring-cloud-starter-parent/pom.xml-->
     <parent>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-parent</artifactId>
-        <version>Brixton.M4</version>
-      <!--  <version>Angel.SR3</version>-->
+        <version>Brixton.SR4</version>
+        <!--<version>Brixton.RELEASE</version>-->
+        <!-- <version>Angel.SR3</version>-->
     </parent>
 
     <modules>
@@ -30,7 +31,6 @@
 
     <packaging>pom</packaging>
     <properties>
-        <spring-cloud-starter-parent.version>Brixton.M4</spring-cloud-starter-parent.version>
         <fastjson.version>1.2.7</fastjson.version>
         <java.version>1.8</java.version>
         <!-- jdbc driver setting -->
@@ -38,7 +38,9 @@
         <druid.version>1.0.15</druid.version>
         <mybatis-spring-boot-starter.version>1.0.0</mybatis-spring-boot-starter.version>
         <!--spring cloud 面板-->
-        <spring-cloud-dashboard.version>1.0.0.RELEASE</spring-cloud-dashboard.version>
+        <spring-cloud-dashboard.version>1.1.0.RELEASE</spring-cloud-dashboard.version>
+        <!-- util -->
+        <lombok.version>1.12.6</lombok.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -53,7 +55,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
-                <version>1.1.0.M4</version>
+                <version>1.1.5.RELEASE</version>
                <!-- <version>${spring-cloud-starter-parent.version}</version>-->
             </dependency>
 
@@ -82,6 +84,12 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -14,6 +14,7 @@ spring:
 #端口号
 server:
      port: 8761
+     #port: 8762
 
 #配置eureka服务端的信息
 eureka:
@@ -25,5 +26,6 @@ eureka:
     server:
       waitTimeInMsWhenSyncEmpty: 0
       #服务端地址
-   # serviceUrl:
-    #  defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #serviceUrl:
+      #defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #defaultZone: http://localhost:8762/eureka/

@@ -18,7 +18,8 @@ spring:
     config:
       failFast: true
       uri: http://localhost:8888
-  #往mq发送消息
-  rabbitmq:
-    host: localhost
-    port: 5672
+    stream:
+      kafka:
+        binder:
+          brokers: 123.56.118.135
+          zkNodes: 123.56.118.135

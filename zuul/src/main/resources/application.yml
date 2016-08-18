@@ -14,9 +14,12 @@ endpoints:
 zuul:
   ignoredServices: "*"
   routes:
-    servicea:
+    eurekaclienta:
+      path: /eurekaclientA/**
+    eurekaclientb:
+      path: /eurekaclientB/**
+    eurekaclientc:
       path: /eurekaclientC/**
-      serviceId: eurekaclientC
 
 server:
   port: 8765
@@ -31,11 +34,4 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    leaseExpirationDurationInSeconds: 5
-    preferIpAddress: false
-    metadataMap:
-      hostname: ${vcap.application.application_uris[0]}
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${random.value}}}
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/

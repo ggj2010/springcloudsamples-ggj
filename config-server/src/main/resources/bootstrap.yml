@@ -16,3 +16,8 @@ spring:
           uri: https://github.com/ggj2010/springcloudsamples-config
           #username: ggj
           #password: 123
+    stream:
+      kafka:
+        binder:
+          brokers: 123.56.118.135
+          zkNodes: 123.56.118.135

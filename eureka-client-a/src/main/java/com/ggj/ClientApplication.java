@@ -16,8 +16,6 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-//注解声明断路器
-@EnableCircuitBreaker
 @EnableFeignClients
 public class ClientApplication {
 

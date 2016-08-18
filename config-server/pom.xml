@@ -28,7 +28,7 @@
        <!--http://localhost:8888/bus/refresh post 提交-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+            <artifactId>spring-cloud-starter-bus-kafka</artifactId>
         </dependency>
 
         <!--test -->
